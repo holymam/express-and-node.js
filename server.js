@@ -123,3 +123,10 @@ app.put('/prodects2/:id', async function(req,res){
     await product2.save()//保存
     res.send(product2)//返回
     }) 
+app.delete('/prodects2/:id',async function(req,res){
+    const product2 =await Product.findById(req.params.id)
+    await product2.remove()
+    res.send({
+        success: true
+    })
+})

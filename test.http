@@ -14,3 +14,6 @@ Content-Type: application/json
 {
     "title":"产品533"
 }
+###
+DELETE {{uri}}prodects2/5f813f5bb86fee12f0e60a0e
+Content-Type: application/json
