@@ -115,3 +115,11 @@ app.post('/products2',async function(req,res){
     const product2 = await Product.create(data)
     res.send(product2)
 })
+//MongoDB修改产品和put请求
+//https://www.bilibili.com/video/BV1Kt411r7L4/?spm_id_from=trigger_reload
+app.put('/prodects2/:id', async function(req,res){
+    const product2 = await Product.findById(req.params.id)//实例
+    product2.title = req.body.title//赋值
+    await product2.save()//保存
+    res.send(product2)//返回
+    }) 
